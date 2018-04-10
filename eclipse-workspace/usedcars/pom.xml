@@ -8,7 +8,7 @@
 	<name>usedcars Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 
- 
+
 	<properties>
 		<!-- Spring版本号 -->
 		<spring.version>5.0.4.RELEASE</spring.version>
@@ -47,7 +47,6 @@
 			<artifactId>spring-tx</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
-
 		<!-- AOP相关包 -->
 		<dependency>
 			<groupId>org.aspectj</groupId>
@@ -59,7 +58,6 @@
 			<artifactId>aspectjweaver</artifactId>
 			<version>1.8.0</version>
 		</dependency>
-
 		<!-- MyBatis相关包 -->
 		<dependency>
 			<groupId>org.mybatis</groupId>
@@ -112,6 +110,40 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- PDF文件生成相关jar包 -->
+		<!-- <dependency> <groupId>com.itextpdf</groupId> <artifactId>itextpdf</artifactId> 
+			<version>5.5.10</version> </dependency> <dependency> <groupId>com.itextpdf</groupId> 
+			<artifactId>itext-asian</artifactId> <version>5.2.0</version> </dependency> 
+			<dependency> <groupId>org.bouncycastle</groupId> <artifactId>bcprov-jdk15on</artifactId> 
+			<version>1.54</version> </dependency> -->
+		<!-- json相关jar包 -->
+		<dependency>
+			<groupId>net.sf.json-lib</groupId>
+			<artifactId>json-lib</artifactId>
+			<version>2.4</version>
+			<classifier>jdk15</classifier>
+		</dependency>
+		
+		<dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+			<version>1.7.0</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-collections</groupId>
+			<artifactId>commons-collections</artifactId>
+			<version>3.1</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.5</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.ezmorph</groupId>
+			<artifactId>ezmorph</artifactId>
+			<version>1.0.3</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -127,5 +159,5 @@
 			</plugin>
 		</plugins>
 	</build>
-	
+
 </project>

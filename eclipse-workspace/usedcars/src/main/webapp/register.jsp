@@ -9,20 +9,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>欢迎注册</title>
-<link rel="stylesheet" type="text/css" href="../css/normalize.css" />
-<link rel="stylesheet" type="text/css" href="../css/demo.css" />
-<link rel="stylesheet" type="text/css" href="../css/component.css" />
-<script src="../js/registercheck.js"></script>
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/normalize.css" />
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/demo.css" />
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/component.css" />
+<script src="${pageContext.request.contextPath}/js/registercheck.js"></script>
 </head>
 <body>
-	<div class="container demo-1">
-		<div class="content">
-			<div id="large-header" class="large-header">
 				<canvas id="demo-canvas"></canvas>
 				<div class="logo_box">
 					<h3>欢迎注册</h3>
 					
-					<form action="<%=basePath%>user/register.action" name="register" method="post">
+					<form action="${pageContext.request.contextPath}/user/register.action" name="register" method="post">
 						<!--***************************************输入用户名***********************************************-->
 						<div class="input_outer">
 							<span class="title">用户名</span> <input name="userNetworkName"
@@ -71,19 +68,9 @@
 								value="注册">
 						</div>
 					</form>
-
-					<a href="javascript:void(0);" onclick="hide1();return false;"
-					style="color: #FFFFFF">已有账号？点击登录</a>
-
+					<a href="index.jsp" style="color: #FFFFFF">已有账号？点击登录</a>
 				</div>
-			</div>
-		</div>
-	</div>
-	<!-- /container -->
-	<script src="../js/TweenLite.min.js"></script>
-	<script src="../js/EasePack.min.js"></script>
-	<script src="../js/rAF.js"></script>
-	<script src="../js/demo-1.js"></script>
+
 	<div style="text-align: center;"></div>
 </body>
 </html>

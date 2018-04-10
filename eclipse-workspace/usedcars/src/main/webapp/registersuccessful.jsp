@@ -9,7 +9,7 @@
 <html>
 <head>
 <title>注册成功</title>
-<link rel="stylesheet" media="screen" href="../css/style.css">
+<link rel="stylesheet" media="screen" href="${pageContext.request.contextPath}/css/style.css">
 <script type="text/javascript">
 			function dosearch() {
 			var sf=document.searchform;
@@ -21,8 +21,7 @@
 <script type="text/javascript">
 	           var time = 8;/*  //时间,秒 */
 			   function Redirect() {
-               window.location = "<%=basePath%>
-	           login.jsp";
+               window.location = "<%=basePath%>index.jsp";
 	           }
 	           var i = 0;
 	           function dis() {
@@ -46,7 +45,7 @@
 
 		<p>
 		<h2>
-			如果时间到未跳转，<a href="<%=basePath%>login.jsp">请点击此处</a>
+			如果时间到未跳转，<a href="<%=basePath%>index.jsp">请点击此处</a>
 		</h2>
 		<p>
 		<h2>

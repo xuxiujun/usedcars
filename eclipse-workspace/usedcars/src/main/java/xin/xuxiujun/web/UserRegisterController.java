@@ -29,7 +29,7 @@ public class UserRegisterController {
 //		System.out.println(register.getUserMobileNumber());
 	    userregisterdao.saveUserInformation(register);	
 	    System.out.println("这是生成的ID"+getNewId());
-		return "redirect:/jsp/registersuccessful.jsp";//重定向到注册成功界面
+		return "redirect:/registersuccessful.jsp";//重定向到注册成功界面
 		
 	}	
 
