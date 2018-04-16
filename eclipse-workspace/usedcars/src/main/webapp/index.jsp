@@ -93,8 +93,7 @@
 						<ul class="nav navbar-nav navbar-right">
 							<!-- 网页顶部选择显示，检测session是否存在，显示不同 -->
 							<c:if test="${user.userNetworkName==null}">
-								<li id=""><a href="javascript:void(0);"
-									onclick="hide11();return false;">还没账号？点击注册</a></li>
+								<li id=""><a href="register.jsp">还没账号？点击注册</a></li>
 							</c:if>
 							<c:if test="${user.userNetworkName!=null}">
 								<li id=""><a href="#">欢迎登录，${user.userNetworkName}</a></li>
@@ -112,7 +111,7 @@
 								</a>
 									<ul class="dropdown-menu">
 										<li><a href="${pageContext.request.contextPath}/hyperlink/personalpage.action">个人主页</a></li>
-										<li><a href="${pageContext.request.contextPath}/hyperlink/release.action">我的发布</a></li>
+										<li><a href="${pageContext.request.contextPath}/Cars/findreleasebyuserid.action?userId=${user.userId}">我的发布</a></li>
 										<li><a href="${pageContext.request.contextPath}/hyperlink/order.action">我的订单</a></li>										
 										<li class="divider"></li>
 										<li><form name="logout"
@@ -123,7 +122,6 @@
 							</c:if>
 						</ul>
 					</div>
-
 				</nav>
 			</div>
 		</div>

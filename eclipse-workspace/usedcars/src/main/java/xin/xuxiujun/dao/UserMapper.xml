@@ -1,11 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-  
-<mapper namespace="xin.xuxiujun.dao.UserDao">
 
+<mapper namespace="xin.xuxiujun.dao.UserDao">
+<!-- 用户登录 -->
  <select id="findByUsername" parameterType="string" resultType="User">
   SELECT * FROM userinfo WHERE usernetworkname=#{userNetworkName}
  </select>
+ <!-- 根据用户id查找 -->
+  <select id="findByUserid" parameterType="string" resultType="User">
+  SELECT * FROM userinfo WHERE userid=#{userId}
+ </select>
+ <!-- 用户注册 -->
+ <insert id="saveUserInformation" parameterType="xin.xuxiujun.domain.User">
+  insert into userinfo(usernetworkname,userpassword,useremail,usermobilenumber,userid) 
+  values(#{userNetworkName},#{userPassword},#{userEmail},#{userMobileNumber},#{userId})
+</insert>
+ <!-- 用户修改个人信息 -->
+<update id="updateUserbaseinformation" parameterType="xin.xuxiujun.domain.User">
+    update userinfo 
+    set    usernetworkname=#{userNetworkName},usertruename=#{userTrueName},useraddress=#{userAddress},useremail=#{userEmail},usersex=#{userSex},usermobilenumber=#{userMobileNumber},userbirthday=#{userBirthday},useridno=#{userIdNo}
+    where  userid=#{userId}
+</update>
+<!-- 上传用户图片 -->
+<update id="uploadUserAvator" parameterType="xin.xuxiujun.domain.User">
+    update userinfo 
+    set    useravator=#{userAvator}
+    where  userid=#{userId}
+</update>
+<!-- 添加我的收藏 -->
+ <insert id="myColllection" parameterType="String">
+  insert into collection(userid,caridnumber) 
+  values(#{userid},#{carid})
+</insert>
+<!-- 查看我的收藏 -->
+<resultMap type="xin.xuxiujun.domain.UserCollections" id="findUserCollections">
+<id     property="collectionId" column="colletion_id"/>
+<result property="userId" column="userid"/>
+<result property="carId" column="caridnumber"/>
+<result property="collecttime" column="collecttime"/>
+</resultMap>
+<select id="findMyCollectionByUserId" resultMap="findUserCollections">
+      select * 
+      from collection
+      where userid=#{userId}
+</select>
 </mapper>
-

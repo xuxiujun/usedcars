@@ -1,9 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<% 
-   String path = request.getContextPath(); 
-   String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
-  %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,8 +13,7 @@
 <body>
 				<canvas id="demo-canvas"></canvas>
 				<div class="logo_box">
-					<h3>欢迎注册</h3>
-					
+					<h3>欢迎注册</h3>		
 					<form action="${pageContext.request.contextPath}/user/register.action" name="register" method="post">
 						<!--***************************************输入用户名***********************************************-->
 						<div class="input_outer">
@@ -70,7 +65,6 @@
 					</form>
 					<a href="index.jsp" style="color: #FFFFFF">已有账号？点击登录</a>
 				</div>
-
 	<div style="text-align: center;"></div>
 </body>
 </html>

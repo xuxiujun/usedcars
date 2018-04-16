@@ -2,7 +2,7 @@ package xin.xuxiujun.domain;
 
 public class User {
 
-	private Integer userId;// 用户编号
+	private String userId;// 用户编号
 	private String userTrueName;// 真实姓名
 	private String userPassword;// 密码
 	private String userNetworkName;// 网名、用户名
@@ -14,13 +14,12 @@ public class User {
 	private String userMobileNumber;// 手机号
 	private String userIdNo;// 身份证号码
 	private String userBirthday;// 生日
-
 	public User() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public User(Integer userId, String userTrueName, String userPassword, String userNetworkName, String userAddress,
+	public User(String userId, String userTrueName, String userPassword, String userNetworkName, String userAddress,
 			String userEmail, String userSex, String userAvator, String userRealNameAuthentic, String userMobileNumber,
 			String userIdNo, String userBirthday) {
 		super();
@@ -38,11 +37,11 @@ public class User {
 		this.userBirthday = userBirthday;
 	}
 
-	public Integer getUserId() {
+	public String getUserId() {
 		return userId;
 	}
 
-	public void setUserId(Integer userId) {
+	public void setUserId(String userId) {
 		this.userId = userId;
 	}
 
@@ -134,4 +133,5 @@ public class User {
 		this.userBirthday = userBirthday;
 	}
 
+	
 }
